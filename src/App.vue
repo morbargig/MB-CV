@@ -35,18 +35,14 @@
         </button>
       </div>
       <div class="topnav">
-        <a  @click="openMenu = !openMenu" class="active">Menu</a>
+        <a @click="openMenu = !openMenu" class="active">Menu</a>
         <div v-if="openMenu" id="myLinks" class="full-width">
           <span class="links-container">
             <a :href="url" target="blank">pdf</a>
             <a href="https://5d60919cef31b.site123.me/" target="blank"
               >My Web Site</a
             >
-            <a
-              href="https://github.com/morbargig"
-              target="blank"
-              >GitHub</a
-            >
+            <a href="https://github.com/morbargig" target="blank">GitHub</a>
             <a
               href="https://www.linkedin.com/in/mor-bargig-744854182/"
               target="blank"
@@ -55,9 +51,9 @@
             <a href="tel:+972 52-861-2379" target="blank"> Contact </a>
             <a href="mailto:mobargig@gmail.com" target="blank"> Email</a>
           </span>
-          <a  @click="admin" class="Admin">Admin ?</a>
+          <a @click="admin" class="Admin">Admin ?</a>
         </div>
-        <div v-else id="Portfolio" class="full-width">
+        <div v-else class="full-width">
           <a
             class="Portfolio"
             href="https://morbargig.github.io/"
@@ -65,6 +61,7 @@
           >
             Portfolio <span></span>
             <img
+              class="Portfolio-img"
               src="smallMorBargigSig.png"
               alt="Javascript"
               :style="`border-radius: 50%; height: ${25 * $px}px; width: ${
@@ -272,7 +269,7 @@ body {
 .topnav a.Admin {
   float: right;
   height: 70 * @Px;
-  color: white ;
+  color: white;
   background: black;
 }
 
@@ -287,6 +284,7 @@ body {
 }
 
 .topnav a.Portfolio {
+  height: 70 * @Px;
   float: right;
 }
 
@@ -333,6 +331,12 @@ button:hover {
   }
   .topnav a.Admin {
     height: 40 * @Px;
+  }
+  .topnav a.Portfolio {
+    height: 40 * @Px;
+    .Portfolio-img {
+      margin-left: 0.5em !important;
+    }
   }
   .topnav a {
     width: fit-content;
