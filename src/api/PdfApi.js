@@ -45,8 +45,11 @@ export default class PdfApi {
     static updatePdf = async (upDate) => {
         let pdf = await localforage.getItem('pdf')
         if (pdf) {
-            pdf.language = upDate.language
-            pdf[upDate.language] = upDate[upDate.language]
+            let language = upDate.language
+            pdf.language = language
+            if (language in upDate) {
+                pdf[language] = upDate[language]
+            }
             localforage.setItem('pdf', pdf);
         }
         let res
@@ -61,7 +64,6 @@ export default class PdfApi {
     static uplodadPdf = (uploadedImage, noServerUploade = false) => {
         let res
         if (!this.serverAlive || noServerUploade) {
-            uploadedImage
             res = FirebaseApi.uplodadPdf(uploadedImage)
         } else {
             res = this.uplodadPdf(uploadedImage, noServerUploade = true)
