@@ -1,7 +1,7 @@
 const webpack = require('webpack');
 
 module.exports = {
-    publicPath: '/Mor-Bargig-CV-Vue.js/',
+    publicPath: '/MB-CV/',
     lintOnSave: false,
     runtimeCompiler: true,
     productionSourceMap: false,
