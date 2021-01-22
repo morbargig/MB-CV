@@ -1,0 +1,270 @@
+html,
+body {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+
+
+body {
+  overflow-y: scroll;
+  overflow-x: hidden;
+
+
+  .new-container {
+    .new-title {
+      font-weight: bold;
+      letter-spacing: 1.2 * @Px;
+      line-height: 1.2em;
+      margin: auto;
+    }
+
+    @media @Desktop {
+      font-size: 1.3vw;
+
+      .headers-generator(@n; @i : 1) when (@i =< @n) {
+        h@{i} {
+          font-size: (3vw - (@i * 0.5));
+        }
+
+        .headers-generator(@n; (@i + 1));
+      }
+
+      .headers-generator(7);
+    }
+
+    @media @Mobile {
+      font-size: 3vw;
+
+      .headers-generator(@n; @i : 1) when (@i =< @n) {
+        h@{i} {
+          font-size: (8vw - (@i - 0.5));
+        }
+
+        .headers-generator(@n; (@i + 1));
+      }
+
+      .headers-generator(7);
+    }
+
+    .margin-bottom-generator(@n; @i : 0) when (@i =< @n) {
+      @ii : 5;
+
+      .margin-bottom-@{i} {
+        margin-bottom: (0em + @i);
+      }
+
+      .margin-bottom-@{i}-@{ii} {
+        margin-bottom: (0.5em + @i);
+      }
+
+      .margin-bottom-generator(@n; (@i + 1));
+    }
+
+    .margin-bottom-generator(7);
+
+    .margin-top-generator(@n; @i : 0) when (@i =< @n) {
+      @ii : 5;
+
+      .margin-top-@{i} {
+        margin-top: (0em + @i );
+      }
+
+      .margin-top-@{i}-@{ii} {
+        margin-top: (0.5em + @i);
+      }
+
+      .margin-top-generator(@n; (@i + 1));
+    }
+
+    .margin-top-generator(7);
+
+    .font-size-generator(@n; @i : 0) when (@i =< @n) {
+      .font-size-@{i} {
+        @media @Desktop {
+          font-size: @i * @Px;
+
+          & when (@i < 50) {
+            letter-spacing: @i / 33.3333333333333333333333 * @Px;
+          }
+
+          & when (@i >=50) {
+            letter-spacing: 1.25 * @Px;
+          }
+        }
+
+        @media @Mobile {
+          font-size: @i * @MobileOnePix;
+        }
+      }
+
+      .font-size-generator(@n; (@i + 1));
+    }
+
+    .font-size-generator(44);
+
+    .width-generator(@n; @i : 1) when (@i =< @n) {
+      .width-@{i} {
+        @media @Desktop {
+          width: @i * @Px;
+        }
+
+        @media @Mobile {
+          width: @i * @MobileOnePix;
+        }
+      }
+
+      .width-generator(@n; (@i + 1));
+    }
+
+    .width-generator(71);
+
+    .height-generator(@n; @i : 1) when (@i =< @n) {
+      .height-@{i} {
+        @media @Desktop {
+          height: @i * @Px;
+        }
+
+        @media @Mobile {
+          height: @i * @MobileOnePix;
+        }
+      }
+
+      .height-generator(@n; (@i + 1));
+    }
+    .height-generator(42);
+  }
+
+  .full-screen {
+    width: 100vw;
+    right: 0;
+    position: absolute;
+  }
+
+  .margin-auto {
+    margin: auto;
+  }
+
+  .fit-text {
+    height: fit-content;
+  }
+
+  .full-width {
+    width: 100%
+  }
+
+  .under-line-bold {
+    height: 4px;
+    background-color: black;
+  }
+
+  .under-line {
+    height: 2.5px;
+    background-color: black;
+  }
+
+  .under-line-lite {
+    height: 1px;
+    background-color: black;
+  }
+
+  .under-line-lite-lite {
+    height: 1px;
+    background-color: rgba(0, 0, 0, 0.494);
+  }
+
+  .border-bottom-bold {
+    border-bottom: 4px solid @color-black;
+  }
+
+  .border-bottom {
+    border-bottom: 2.5px solid @color-black;
+  }
+
+  .border-bottom-lite {
+    border-bottom: 1px solid @color-black;
+  }
+
+  .margin-right-1 {
+    margin-right: 1em;
+  }
+
+  .margin-right-2 {
+    margin-right: 2em;
+  }
+
+  .margin-right-3 {
+    margin-right: 3em;
+  }
+
+  .margin-left-1 {
+    margin-left: 1em;
+  }
+
+  .margin-left-2 {
+    margin-left: 2em;
+  }
+
+  .margin-left-3 {
+    margin-left: 3em;
+  }
+
+  .bold-text {
+    font-weight: bold;
+  }
+
+  .text-to-right {
+    text-align: right;
+  }
+
+  .text-to-center {
+    text-align: center;
+  }
+
+  .increase-by-1 {
+    font-size: 1em;
+  }
+
+  .increase-by-1-5 {
+    font-size: 1.5em;
+  }
+
+  .increase-by-2 {
+    font-size: 2em;
+  }
+
+  .decline-by-1-5 {
+    font-size: 0.75em;
+  }
+
+  .decline-by-2 {
+    font-size: 0.5em;
+  }
+
+  .pointer {
+    cursor: pointer;
+  }
+
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  &:link,
+  &:active,
+  &:visited,
+  &:hover {
+    color: inherit !important;
+    text-decoration: none !important;
+  }
+}
+
+.black {
+  background: black;
+}
+
+.padding-0 {
+  padding: 0;
+}
+
