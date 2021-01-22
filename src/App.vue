@@ -35,7 +35,7 @@
         </button>
       </div>
       <div class="topnav">
-        <a href="/#" @click="openMenu = !openMenu" class="active">Menu</a>
+        <a  @click="openMenu = !openMenu" class="active">Menu</a>
         <div v-if="openMenu" id="myLinks" class="full-width">
           <span class="links-container">
             <a :href="url" target="blank">pdf</a>
@@ -43,7 +43,7 @@
               >My Web Site</a
             >
             <a
-              href="https://github.com/morbargig?tab=repositories"
+              href="https://github.com/morbargig"
               target="blank"
               >GitHub</a
             >
@@ -55,7 +55,7 @@
             <a href="tel:+972 52-861-2379" target="blank"> Contact </a>
             <a href="mailto:mobargig@gmail.com" target="blank"> Email</a>
           </span>
-          <a href="/#" @click="admin" class="Admin">Admin ?</a>
+          <a  @click="admin" class="Admin">Admin ?</a>
         </div>
         <div v-else id="Portfolio" class="full-width">
           <a
@@ -260,7 +260,7 @@ body {
 
 .topnav a {
   float: left;
-  color: white;
+  color: black;
   display: flex;
   align-items: center;
   width: fit-content;
@@ -272,7 +272,7 @@ body {
 .topnav a.Admin {
   float: right;
   height: 70 * @Px;
-  color: white !important;
+  color: white ;
   background: black;
 }
 
