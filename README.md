@@ -41,7 +41,7 @@ to start the project localy you will need to run `npm start`
 
 to deploy it to heroku you will need to conect to your heroku project and run `npm run herokuPush`
 
-to deploy it to github-pages you will need to set your own repository and run `npm run deploy` **(it don't going to work with mongoDB database, just with firebase configuration)
+to deploy it to github-pages you will need to set your own repository and run `npm run deploy` **(it don't going to work with the node.js express server and the mongoDB database, just with firebase configuration)
 
 don't forget to send your CV :)
 
