@@ -35,6 +35,8 @@ class FirebaseApi {
 
 you need to use your own firebase configuration and change the usernaame in the FirebaseApi api constructor!
 
+or either use node.js exprees with local or remote mongoDB database and run it with 
+
 to start the project localy you will need to run `npm start`
 
 to deploy it to heroku you will need to conect to your heroku project and run `npm run herokuPush`
