@@ -11,7 +11,7 @@ go inside the project folder `cd MB-CV`
 
 to install all the libraries, run `npm install`
 
-go to src/api/config
+go to src/api/config/firebase.js
 ```javascript
 import firebase from 'firebase'
 const firebaseConfig = {
