@@ -35,11 +35,11 @@ class FirebaseApi {
 
 you need to use your own firebase configuration and change the usernaame in the FirebaseApi api constructor!
 
-to start the website you will need to run `npm start`
+to start the project localy you will need to run `npm start`
 
 to deploy it to heroku you will need to conect to your heroku project and run `npm run herokuPush`
 
-to deploy it to github-pages you will need to set your own reposetory and run `npm run deploy`
+to deploy it to github-pages you will need to set your own repository and run `npm run deploy`
 
 
 
