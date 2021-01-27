@@ -1,6 +1,4 @@
 import firebase from 'firebase'
-import axios from 'axios'
-import route from './route'
 
 const firebaseConfig = {
   apiKey: process.env.VUE_APP_FIREBASE_API_KEY,
