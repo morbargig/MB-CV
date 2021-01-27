@@ -33,7 +33,7 @@ class FirebaseApi {
   ...
 ```
 
-you need to use your own firebase configuration and change the usernaame in the FirebaseApi api constructor!
+you need to use your own firebase configuration and change the username in the FirebaseApi api constructor!
 
 or either use node.js exprees with local or remote mongoDB database and run it with `npm run startServer`
 
