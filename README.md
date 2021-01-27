@@ -12,6 +12,7 @@ after you need to install all the libraries, run `npm install`
 to start the website you will need to run `npm start`
 
 you need to fill this fields with you firebase details 
+in src/api/config
 ```javascript
 import firebase from 'firebase'
 const firebaseConfig = {
@@ -23,13 +24,18 @@ const firebaseConfig = {
     messagingSenderId: "???",
     appId: "???"
   };
-  // Initialize Firebase
-  firebase.initializeApp(firebaseConfig);
-export default firebase
+
+class FirebaseApi {
+  constructor() {
+    this.firebase = firebase
+    this.firebase.initializeApp(firebaseConfig);
+    this.username = "???"
+  }
+  ...
 ```
 
-you need to verify that you have a DB config right, and you ready to start !
+you need to use your own firebase configuration and change the usernaame in the FirebaseApi api constructor!
 
-and don't forget to send your CV :)
+don't forget to send your CV :)
 
 
