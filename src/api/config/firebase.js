@@ -14,7 +14,6 @@ class FirebaseApi {
   constructor() {
     this.firebase = firebase
     this.firebase.initializeApp(firebaseConfig);
-    this.serverAlive = false
     this.username = "mor bargig"
   }
 
