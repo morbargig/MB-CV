@@ -1,18 +1,17 @@
 ## [Mor Bargig CV](https://mor-bargig-cv.herokuapp.com)
 
-web site for my CV, so I can allway send the some CV link and my CV allways be up to date,
-and i can update them every time from the internet in easy way.
+web site for your Resume, so you can allway send the some CV link and your CV allways be up to date,
+and you can update them every time from the internet in easy way.
 
 [![Demo CountPages alpha](https://media.giphy.com/media/ReVsLYJBNg60DrEi8j/giphy.gif)](https://www.youtube.com/watch?v=AYlr8CLW-RA)
 
-you want to use this website ? you welcome, run this command `git clone https://github.com/morbargig/Mor-Bargig-CV-Vue.js.git`
+you want to use this website ? you welcome, run this command `git clone https://github.com/morbargig/MB-CV.git`
 
-after you need to install all the libraries, run `npm install`
+go inside the project folder `cd MB-CV`
 
-to start the website you will need to run `npm start`
+to install all the libraries, run `npm install`
 
-you need to fill this fields with you firebase details 
-in src/api/config
+go to src/api/config
 ```javascript
 import firebase from 'firebase'
 const firebaseConfig = {
@@ -35,6 +34,8 @@ class FirebaseApi {
 ```
 
 you need to use your own firebase configuration and change the usernaame in the FirebaseApi api constructor!
+
+to start the website you will need to run `npm start`
 
 don't forget to send your CV :)
 
